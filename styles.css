@@ -18,3 +18,7 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+
+.active {
+  background-color: rgb(230, 215, 17);
+}

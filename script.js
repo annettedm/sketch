@@ -17,3 +17,10 @@ function createDivs() {
 }
 
 createDivs();
+
+divContainer.addEventListener("mouseover", draw);
+
+function draw(event) {
+  let div = event.target;
+  div.classList.add("active");
+}
