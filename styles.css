@@ -86,7 +86,7 @@ body {
   background-color: rgb(21, 165, 86);
 }
 
-/* -------------- custom prompt --------------- */
+/* -------------- custom modal --------------- */
 
 .modal-background {
   display: block;
@@ -103,7 +103,7 @@ body {
   background-color: #fefefe;
   margin: 15% auto;
   border: 1px solid #888;
-  width: 70%;
+  width: 55%;
   border: none;
   border-radius: 7px;
 
@@ -163,7 +163,7 @@ body {
 }
 
 .btns-container {
-  margin: 30px;
+  margin-top: 10px;
 }
 
 .btns-container button {
