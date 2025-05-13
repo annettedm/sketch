@@ -14,7 +14,7 @@ There is a button "Select squares number", when clicked, a popup is asking a use
 3d. a user enters a non-numeric value and clicks "Ok" → validation at popup field and an error message on "Ok" button?
 3e. a user enters something and clicks "Cancel" → nothing happens
 3f. a user enters nothing and clicks "Cancel" → nothing happens
-4. a user clicks "Ok" at the popup  → event handler on "Ok" button? 
+4. a user clicks "Ok" at the popup  → event handler on "Ok" button? clear input
 5. "Ok" event handler function
     a. clear divContainer contents
     b. create divs inside divContainer. logics on number of squares and their height and width 
