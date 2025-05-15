@@ -5,7 +5,7 @@ When a user hovers over a div, it changes color (mouseover), leaving a pixelated
 
 There is a button "Select squares number", when clicked, a popup is asking a user for the number of squares per side for the new grid.  A user enters a number from 0 to 100 at the pop up, and a grid with the newly entered number per side is created. A user can draw at the grid. 
 
-// developer notes
+// developer notes on setting number of divs per grid side 
 1. a button "Select squares number" is placed at the top of the screen
 2. a user clicks a button and a popup is triggered with the text "Here you can change number of squares at the canvas per side. Please enter a number from 1 to 100. Clicking 'Cancel' entering nothing will not effect the current grid."
 3a. a user enters a number from 1 to 100 and clicks "Ok" → current grid is cleared, a new grid is created with number of divs entered
@@ -23,3 +23,10 @@ There is a button "Select squares number", when clicked, a popup is asking a use
 
 
 
+// developer notes on darken divs 
+1. create a transparent div as a child of the existing divs with the same size when creating a list of divs in divs container;
+2. make them transparent
+3. set PARENT event target div color random and rgba opacity when on hover
+4. get event target color when on hover
+5. parse rgba value
+6. decrease rgba value by 0.1 
