@@ -1,7 +1,12 @@
+import { closeModal } from "./modules/customModal.js";
+
+
 const divContainer = document.querySelector("#div-container");
-const btn = document.querySelector("#btn-select-divs-number");
+const btnSelectDivsNumber = document.querySelector("#btn-select-divs-number");
+const divsNumberInput = document.querySelector("#divs-number-input");
 const modalContainer = document.querySelector("#modal-container");
-const closeModalButton = document.querySelector(".close");
+
+
 
 function createDivs(divsPerSide) {
   const divsTotal = divsPerSide * divsPerSide;
@@ -16,7 +21,7 @@ function createDivs(divsPerSide) {
   }
 }
 
-createDivs(100);
+createDivs(10);
 
 divContainer.addEventListener("mouseover", draw);
 
@@ -25,29 +30,18 @@ function draw(event) {
   div.classList.add("active");
 }
 
-btn.addEventListener("click", callModal);
+btnSelectDivsNumber.addEventListener("click", callModal);
 
-function callModal(event) {
+function callModal() {
+  divsNumberInput.value = "";
+
   modalContainer.style.display = "block";
-
-  //const promptResult = prompt("H");
-
-  if (sign === null) {
-    log.innerText = "OK, maybe next time.";
-  } else if (sign.toLowerCase() === "") {
-    log.innerText = "Don't be shy, enter your sign!";
-  }
 }
 
-window.addEventListener("click", (event) => {
-  if (event.target === modalContainer) {
-    modalContainer.style.display = "none";
-  }
-});
+
 
 
 // // developer notes
-// 2. a user clicks a button and a popup is triggered with the text "Here you can change number of squares at the canvas per side. Please enter a number from 1 to 100. Clicking 'Cancel' entering nothing will not effect the current grid."
 // 3a. a user enters a number from 1 to 100 and clicks "Ok" → current grid is cleared, a new grid is created with number of divs entered --- value to integer
 // 3b. a user enters a number less than 1 or greater than 100 and clicks "Ok" → validation at popup field and an error message on "Ok" button?
 // 3c. a user enters nothing and clicks "Ok" → validation at popup field and an error message on "Ok" button? ---- empty string 
