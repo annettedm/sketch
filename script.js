@@ -1,5 +1,5 @@
 import { closeModal, callModal } from "./modules/customModal.js";
-
+import { drawRandom } from "./modules/randomColors.js";
 
 const divContainer = document.querySelector("#div-container");
 const btnSelectDivsNumber = document.querySelector("#btn-select-divs-number");
@@ -27,7 +27,7 @@ divContainer.addEventListener("mouseover", draw);
 
 function draw(event) {
   let div = event.target;
-  div.classList.add("active");
+  div.style.backgroundColor = drawRandom();
 }
 
 function clearGrid() {

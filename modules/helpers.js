@@ -18,4 +18,8 @@ function makeNumeric(value) {
   }
 }
 
-export { setValidationMessage, makeNumeric };
+function randomize(number) {
+  return Math.floor(Math.random() * number);
+}
+
+export { setValidationMessage, makeNumeric, randomize };
