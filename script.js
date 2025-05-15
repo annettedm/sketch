@@ -1,22 +1,27 @@
+import { closeModal, callModal } from "./modules/customModal.js";
 
-// 2. 16x16 grid of square divs with JavaScript.
-//   a. flexbox to make divs appear as a grid
-//   b. pay attention to borders and margins as they may adjust squares size
-// 3. use console.log and devtools for help
 
-const divContainer = document.querySelector("#divContainer");
+const divContainer = document.querySelector("#div-container");
+const btnSelectDivsNumber = document.querySelector("#btn-select-divs-number");
+const divsNumberInput = document.querySelector("#divs-number-input");
+const modalContainer = document.querySelector("#modal-container");
 
-function createDivs() {
-  for (let i = 0; i < 256; i++) {
+
+
+function createDivs(divsPerSide) {
+  const divsTotal = divsPerSide * divsPerSide;
+  const divSide = 960 / divsPerSide;
+
+  for (let i = 0; i < divsTotal; i++) {
     let div = document.createElement("div");
-    div.style.width = "60px";
-    div.style.height = "60px";
+    div.style.width = `${divSide}px`;
+    div.style.height = `${divSide}px`;
     div.style.border = "1px solid #fa3d64";
     divContainer.appendChild(div);
   }
 }
 
-createDivs();
+createDivs(10);
 
 divContainer.addEventListener("mouseover", draw);
 
@@ -24,3 +29,12 @@ function draw(event) {
   let div = event.target;
   div.classList.add("active");
 }
+
+function clearGrid() {
+  divContainer.innerHTML = "";
+}
+
+btnSelectDivsNumber.addEventListener("click", callModal);
+
+export { createDivs, clearGrid };
+

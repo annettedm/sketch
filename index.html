@@ -3,13 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="script.js" defer></script>
   <title>Sketch</title>
 </head>
 <body>
-  <div id="divContainer">
+  <button id="btn-select-divs-number" class="btn btn-primary margin-top">Select squares number</button>
+  <div id="div-container">
     
+  </div>
+  <div id="modal-container" class="modal-background">
+    <div class="modal">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Grid boxes number</h2>
+      </div>
+      <div class="modal-body">
+        <p>Here you can change number of squares at the canvas per each side. Please enter<br> a number from 1 to 100. Cancel or empty value will not effect the current grid.</p>
+        <p></p>
+        <input type="text" id="divs-number-input" class="divs-number-input" placeholder="From 1 to 100...">
+        <p id="input-validation" class="error-message">validation message</p>
+        <div id="btns-container" class="btns-container">
+          <button id="btn-modal-ok" class="btn btn-primary">Ok</button>
+          <button id="btn-modal-cancel" class="btn btn-secondary margin-left">Cancel</button>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

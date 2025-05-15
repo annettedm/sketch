@@ -2,16 +2,87 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  color: rgb(76, 75, 75);
 }
 
 body {
-  background-color: rgb(61, 135, 158);
+  background-color: rgb(168, 75, 75);
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
+  row-gap: 15px;
 }
 
-#divContainer {
+/* ------------- spacing ------------- */
+
+.margin-left {
+  margin-left: 20px;
+}
+
+.margin-top {
+  margin-top: 15px;
+}
+
+/* ------------ buttons general ------------ */
+
+.btn {
+  padding: 15px 35px;
+  border-radius: 7px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: rgb(81, 172, 81);
+  border: 2px solid rgb(81, 172, 81);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: rgb(63, 143, 63);
+  border: 2px solid rgb(63, 143, 63);
+}
+
+.btn-primary:active {
+  background-color: rgb(52, 117, 52);
+  border: 2px solid rgb(52, 117, 52);
+}
+
+.btn-secondary {
+
+  background-color: white;
+  color: rgb(81, 172, 81);
+  border: 2px solid rgb(81, 172, 81);
+}
+
+.btn-secondary:hover {
+  color: rgb(63, 143, 63);
+  border: 2px solid rgb(63, 143, 63);
+  border: 2px solid rgb(63, 143, 63);
+}
+
+.btn-secondary:active {
+ color: rgb(52, 117, 52);
+ border: 2px solid rgb(52, 117, 52);
+}
+
+/* --------------- error message --------------- */
+
+.error-message {
+  visibility: hidden;
+  color: rebeccapurple;
+  font-size: 0.9em !important;
+  margin-top: -5px;
+}
+
+/* ------------- grid ------------- */
+
+#div-container {
   background-color: white;
   width: 960px;
   height: 960px;
@@ -19,6 +90,91 @@ body {
   flex-wrap: wrap;
 }
 
+
 .active {
-  background-color: rgb(230, 215, 17);
+  background-color: rgb(21, 165, 86);
+}
+
+/* -------------- custom modal --------------- */
+
+.modal-background {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal {
+  background-color: #fefefe;
+  margin: 15% auto;
+  border: 1px solid #888;
+  width: 55%;
+  border: none;
+  border-radius: 7px;
+
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(81, 172, 81);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 15px 16px;
+  background-color: rgb(180, 53, 80);
+  color: white;
+  text-align: center;
+  border-radius: 7px 7px 0 0;
+}
+
+.modal-header h2 {
+  color: white;
+}
+
+.modal-body {
+  padding: 40px;
+  text-align: center;
+}
+
+.modal-body p {
+  line-height: 2.5;
+  font-size: 1.1rem;
+}
+
+.divs-number-input {
+  width: 75%;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid rgba(136, 136, 136, 0.4);
+  border-radius: 7px;
+  padding: 6px;
+  margin-top: 15px;
+
+}
+
+.divs-number-input:focus {
+  border: 1px solid rgba(180, 53, 80, 0.4);
+  box-shadow: 1px 1px 10px 4px rgba(0, 0, 0, 0.04), 1px 1px 10px 4px rgba(0, 0, 0, 0.05);
+  outline: none;
+}
+
+.btns-container {
+  margin-top: 10px;
+}
+
+.btns-container button {
+
 }
