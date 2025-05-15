@@ -1,4 +1,4 @@
-import { closeModal } from "./modules/customModal.js";
+import { closeModal, callModal } from "./modules/customModal.js";
 
 
 const divContainer = document.querySelector("#div-container");
@@ -30,29 +30,11 @@ function draw(event) {
   div.classList.add("active");
 }
 
-btnSelectDivsNumber.addEventListener("click", callModal);
-
-function callModal() {
-  divsNumberInput.value = "";
-
-  modalContainer.style.display = "block";
+function clearGrid() {
+  divContainer.innerHTML = "";
 }
 
+btnSelectDivsNumber.addEventListener("click", callModal);
 
+export { createDivs, clearGrid };
 
-
-// // developer notes
-// 3a. a user enters a number from 1 to 100 and clicks "Ok" → current grid is cleared, a new grid is created with number of divs entered --- value to integer
-// 3b. a user enters a number less than 1 or greater than 100 and clicks "Ok" → validation at popup field and an error message on "Ok" button?
-// 3c. a user enters nothing and clicks "Ok" → validation at popup field and an error message on "Ok" button? ---- empty string 
-// 3d. a user enters a non-numeric value and clicks "Ok" → validation at popup field and an error message on "Ok" button?
-// 3e. a user enters something and clicks "Cancel" → nothing happens ---- null 
-// 3f. a user enters nothing and clicks "Cancel" → nothing happens --- null 
-// 4. a user clicks "Ok" at the popup  → event handler on "Ok" button? clear input
-// 5. "Ok" event handler function
-//     a. clear divContainer contents
-//     b. create divs inside divContainer. logics on number of squares and their height and width 
-//       → user number X user number = total number of squares
-//       → 960 / user number = div width = div height in pixels 
-
-// ? > Button tags in HTML and how make a JavaScript function run when a tag is clicked.

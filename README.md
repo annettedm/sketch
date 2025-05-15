@@ -21,6 +21,5 @@ There is a button "Select squares number", when clicked, a popup is asking a use
       → user number X user number = total number of squares
       → 960 / user number = div width = div height in pixels 
 
-? > Button tags in HTML and how make a JavaScript function run when a tag is clicked.
 
 
